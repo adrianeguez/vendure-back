@@ -1,0 +1,26 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "run:server": "ts-node ./src/index.ts",
+    "run:worker": "ts-node ./src/index-worker.ts",
+    "start": "concurrently npm:run:*",
+    "build": "tsc",
+    "migration:generate": "ts-node migration generate",
+    "migration:run": "ts-node migration run",
+    "migration:revert": "ts-node migration revert"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "1.6.2",
+    "@vendure/asset-server-plugin": "1.6.2",
+    "@vendure/core": "1.6.2",
+    "@vendure/email-plugin": "1.6.2",
+    "better-sqlite3": "7.5.3",
+    "typescript": "4.3.5"
+  },
+  "devDependencies": {
+    "concurrently": "7.2.1",
+    "ts-node": "10.8.1"
+  }
+}
